@@ -1,0 +1,38 @@
+<html>
+
+<body>
+ <div id="right" ><span id="originalName" ondragstart="onDragStart(event)"  draggable="true">Amruta</span></div>
+ <div id="left" ondrop="onDrop(event)" ondragover="allowDragOver(event)"></div>
+<style>
+	
+	#left{
+		width:150px;
+		height:150px;
+		border:1px solid red;
+		float:left;
+		margin-left:10px;
+	}
+	#right{
+		width:150px;
+		height:150px;
+		border:1px solid black;
+		float:left;
+		margin-left:10px;
+	}
+</style>
+ <script type="text/javascript">
+	function onDragStart(ev) {
+		ev.dataTransfer.setData("Text",ev.target.id);
+	}
+	function allowDragOver(ev) {
+		ev.preventDefault();
+	}
+	function onDrop(ev) {
+		ev.preventDefault();
+		var data = ev.dataTransfer.getData("Text");
+		ev.target.appendChild(document.getElementById(data));
+	}
+</script>
+
+</body>
+</html>

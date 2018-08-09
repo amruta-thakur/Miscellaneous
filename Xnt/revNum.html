@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<title>Reverse Number</title>
+	</head>
+	<body>
+		<script>
+		var num = 6394;
+		var result = 0;
+		var reverse;
+		while(parseInt(num)>0){
+			reverse = parseInt(num)%10;
+			num = parseInt(num)/10;
+			result = (result*10)+reverse;
+		}
+		console.log(result);
+		</script>
+	</body>
+
+</html>

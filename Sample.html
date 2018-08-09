@@ -1,0 +1,102 @@
+​​
+<html>
+<style>
+.for-search {
+    margin-top: 15px;
+}
+
+.for-search .input-group .form-control {
+    z-index: 0;
+}
+
+​​ .for-search .search-query {
+    padding-right: 3px;
+    padding-right: 4px \9;
+    padding-left: 3px;
+    padding-left: 4px \9;
+    width: 116%;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.for-search button {
+    border: 0;
+    background: none;
+    /** belows styles are working good */
+    padding: 2px 5px;
+    margin-top: 2px;
+    position: relative;
+    left: 0px;
+    height: 28px;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 8px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #9c9c9c;
+}
+
+.for-button2 {
+    background: #545454;
+    padding: 6px 15px;
+    margin-left: 10px;
+    color: #ffffff;
+    border: none;
+    float: right;
+    margin-right: 60px;
+}
+
+
+.for-searchbtn {
+    float: left;
+}
+</style>
+​
+<div class="for-search">
+    <div class="input-group">
+        <input type="text" id="homeSearchBox" class="search-query form-control" placeholder="Search" />
+        <span class="input-group-btn">
+                            <button class="btn" type="button" id="btnsearchButton">
+                                <span class=" glyphicon glyphicon-search"></span>
+        </button>
+        </span>
+    </div>
+</div>
+<script>
+$(document).ready(function() {
+
+    $('#btnsearchButton').on('click', takedaSearch.onSearchButtonClicked);
+    $('#homeSearchBox').on('keyup', takedaSearch.onKeyUpInSearchBox);
+
+});
+var takedaSearch = {
+    onKeyUpInSearchBox: function(event) {
+        event.stopPropagation();
+        event.preventDefault();
+
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        console.log(keycode);
+        if (keycode == '13') {
+            console.log("In keword if");
+            takedaSearch.onSearchButtonClicked();
+        }
+
+    },
+    onSearchButtonClicked: function() {
+        console.log("In search btn");
+        var searchText = $.trim($('#homeSearchBox').val());
+
+        searchText = escapeProperlyCoreCore(searchText, false, false, false);
+        if (searchText == "" || searchText == undefined || searchText == null) {
+            return;
+        }
+
+        window.location.href = "/sites/geos/US/HR/Pages/search.aspx?keyword=" + searchText;
+    }
+}
+</script>
+
+</html>

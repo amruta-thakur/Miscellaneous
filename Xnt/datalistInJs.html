@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Datalist using JS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	Enter City Name: <input type="text">
+	<div id="container"></div>
+	<script>
+		var cityList = ["Pune", "Mumbai", "Punjab", "Punji"]
+		$("input").on("keyup",function(){
+	        var val1 = $("input").val();
+	        console.log(val1);
+	        $("#container").empty();
+	        for(let i=0;i<cityList.length;i++){
+	        	console.log(cityList[i]);
+
+	        	console.log(cityList[i].toLowerCase().indexOf(val1.toLowerCase()));
+	        	if(cityList[i].toLowerCase().indexOf(val1.toLowerCase()) != -1){
+	        		var add = "<div>"+cityList[i]+"</div><br>";
+	        		$("#container").append(add);
+	        	}
+	        }
+	    });
+	</script>
+</body>
+</html>

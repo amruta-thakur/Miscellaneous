@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="500" height="1000" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(0,0);
+ctx.lineTo(200,100);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(150,100,90,0,2*Math.PI);
+ctx.stroke();
+
+ctx.font = "30px Arial";
+ctx.fillText("Hello World",180,200);
+
+ctx.font = "30px Arial";
+ctx.strokeText("Hello World",10,250);
+
+
+// Create gradient
+var grd = ctx.createLinearGradient(0,0,200,0);
+grd.addColorStop(0,"red");
+grd.addColorStop(1,"white");
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(10,10,150,80);
+
+
+</script>
+
+</body>
+</html>

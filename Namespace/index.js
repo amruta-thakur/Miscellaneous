@@ -1,0 +1,1 @@
+alert(MainNameSpace.add(2, 3));
