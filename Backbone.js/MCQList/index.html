@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script type="text/x-handlebars-template" id="mcqTemplate">
+    <div id="mcq-{{id}}">
+    	<div id="{{id}}">
+            {{questionText}}
+            <br> {{instruction}}
+        </div>
+        <br>
+        <div class="allOptions">
+            {{#each options}}
+            	<input type="radio" name="mcqOption-{{../id}}" id="{{../id}}-{{id}}" class="option" />{{optionText}} 
+            {{/each}}
+        </div>
+        <br />
+        <br />
+        <div class="feedback">
+            <div id="correct-{{id}}" class="correct">{{correctFeedback}}</div>
+            <div id="incorrect-{{id}}" class="incorrect">{{incorrectFeedback}}</div>
+        </div>
+        <div id="buttonContainer">
+            <button id="submitId-{{id}}" class="submit" value="Submit" disabled>Submit</button>
+            <button id="resetId-{{id}}" class="reset" value="Reset" disabled>Reset</button>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+    </div>
+    </script>
+    <div id="questionContainer">
+    	<div id="mcqContainer"></div>
+    </div>
+    <script src="resources/lib/jquery-1.9.1.min.js"></script>
+    <script src="resources/lib/handlebars-v1.3.0.js"></script>
+    <script src="resources/lib/underscore.js"></script>
+    <script src="resources/lib/backbone.js"></script>
+    <script src="resources/js/data.js"></script>
+    <script src="resources/js/questionView.js"></script>
+    <script src="resources/js/main.js"></script>
+</body>
+
+</html>

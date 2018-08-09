@@ -1,0 +1,45 @@
+<! DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+		<meta charset="UTF-8">
+		<title>Backbone Tutorial Blogroll App</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Backbone Tutorial Blogroll App</h1>
+		</div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Author</th>
+					<th>Title</th>
+					<th>URL</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody class="blogs-list"></tbody>
+		</table>
+		<script type="text/html" id="blogs-template">
+		<td>
+			<span class="author"><%= author %></span>
+		</td>
+		<td>
+			<span class="title"><%= title %></span>
+		</td>
+		<td>
+			<span class="url"><%= url %></span>
+		</td>
+		<td>
+			<button class="btn btn-warning edit-blog">Edit</button>
+		</td>
+		<td>
+			<button class="btn btn-danger delete-blog">Delete</button>
+		</td>
+		</script>
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/underscore/underscore.js"></script>
+		<script src="bower_components/backbone/backbone.js"></script>
+		<script src="scripts.js"></script>
+	</body>
+</html>

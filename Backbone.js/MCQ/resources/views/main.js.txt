@@ -1,0 +1,5 @@
+$(function(){
+    var questionModel = new QuestionModel(Questions);
+    var questionViewObject = new QuestionView({model:questionModel, el:$("#questionContainer")});
+    questionViewObject.render();
+});

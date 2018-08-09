@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script type="text/x-handlebars-template" id="questionTemplate">
+        <div>
+            {{questionText}}
+            <br> {{instruction}}
+        </div>
+        <br>
+        <div>
+            {{#each options}}
+            	<input type="radio" name="mcqOption" id="{{@index}}" class="option" />{{optionText}} 
+            {{/each}}
+        </div>
+        <br />
+        <br />
+        <div>
+            <div id="correctFeedback">{{correctFeedback}}</div>
+            <div id="incorrectFeedback">{{incorrectFeedback}}</div>
+        </div>
+    </script>
+
+    <div id="questionContainer">
+        <div id="question"></div>
+        <div id="buttonContainer">
+            <button id="submitId" class="submit" value="Submit" disabled>Submit</button>
+            <button id="resetId" class="reset" value="Reset" disabled>Reset</button>
+        </div>
+    </div>
+    <br><br>
+    <button value="next" class="next">Next</button>
+    <script src="resources/lib/jquery-1.9.1.min.js"></script>
+    <script src="resources/lib/handlebars-v1.3.0.js"></script>
+    <script src="resources/lib/underscore-min.js"></script>
+    <script src="resources/lib/backbone-min.js"></script>
+    <script src="resources/data/data.js"></script>
+    <script src="resources/views/questionView.js"></script>
+    <script src="resources/views/main.js"></script>
+</body>
+
+</html>

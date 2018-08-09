@@ -1,0 +1,60 @@
+var QuestionModel = Backbone.Model.extend({});
+
+var QuestionView = Backbone.View.extend({
+    initialize: function() {
+
+    },
+
+    events: {
+        'change .option': 'onRadioChanged',
+        'click #submitId': 'onSubmitClicked',
+        'click #resetId': 'onResetClicked'
+    },
+
+    render: function() {
+        var source = $("#questionTemplate").html();
+        var template = Handlebars.compile(source);
+        var html = template(this.model.toJSON());
+        this.$('#question').html(html);
+        this.$el.find("#correctFeedback").hide();
+        this.$el.find("#incorrectFeedback").hide();
+        return this;
+    },
+
+    onRadioChanged: function(event) {
+        var currentTargetEl = $(event.currentTarget);
+        var currentOptionId = parseInt(currentTargetEl.attr("id"));
+        _.each(this.model.get('options'), function(item, index) {
+            item.isSelected = false;
+            if (index === currentOptionId) {
+                item.isSelected = true;
+            }
+        });
+        $('#submitId').prop('disabled', false);
+    },
+
+    onSubmitClicked: function(event) {
+        var answer = _.filter(this.model.get('options'), function(item, index) {
+            if (item.isSelected === true && item.isCorrect === true) {
+                return item;
+            }
+        });
+        if (answer.length === 0) {
+            this.$("#incorrectFeedback").show();
+        } else {
+            this.$("#correctFeedback").show();
+        }
+        $('.option').prop('disabled', true);
+        $('#submitId').prop('disabled', true);
+        $('#resetId').prop('disabled', false);
+    },
+
+    onResetClicked: function(event) {
+    	$('.option').prop('disabled', false);
+    	this.$('.option').prop('checked', false);
+    	this.$("#correctFeedback").hide();
+        this.$("#incorrectFeedback").hide();
+        $('#submitId').prop('disabled', true);
+        $('#resetId').prop('disabled', true);
+    }
+});

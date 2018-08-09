@@ -1,0 +1,33 @@
+<html>
+
+<body>
+    <script type="text/javascript">
+    var personalDetails = {
+        name: "Amruta",
+        surname: "Thakur",
+        address: {
+            add1: "Pune",
+            zipCode: "22",
+        },
+        degrees: ["BCS", "MCA"]
+    }
+
+    function deepClone(object) {
+        var newObject = {};
+        for (var key in object) {
+            if (typeof object[key] === "object" && Object.prototype.toString.call(object[key]) !== "[object Array]") {
+                newObject[key] = deepClone(object[key]);
+            } else {
+                newObject[key] = object[key];
+            }
+        }
+        return newObject;
+    }
+
+    var personalDetails1 = deepClone(personalDetails);
+    console.log(personalDetails);
+    console.log(personalDetails1);
+    </script>
+</body>
+
+</html>

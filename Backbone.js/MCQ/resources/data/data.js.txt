@@ -1,0 +1,14 @@
+var Questions = {
+
+		id:"1",
+        questionText:"What would I like to have guess?",
+        instruction:"select an option",
+		correctFeedback:"Your Answer is right",
+        incorrectFeedback:"Your Answer is wrong",
+		options:[
+            {id:"opt1",optionText:"Tea", isSelected:false, isCorrect:false},
+            {id:"opt2",optionText:"coffee", isSelected:false, isCorrect:true},
+			{id:"opt3",optionText:"ColdDrink", isSelected:false, isCorrect:false},
+            {id:"opt4",optionText:"Ice-cream", isSelected:false, isCorrect:false}
+        ]   
+	}

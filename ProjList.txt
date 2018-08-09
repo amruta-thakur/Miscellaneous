@@ -1,0 +1,124 @@
+Parson's Activities: Pearson's is company who makes  is  is learning course for students to learn different subjects like preschool, Mathematics, chemistry etc 
+MCQ
+Hotspot
+Drag and Drop
+Drag and drop with clone
+fill in the blanks
+Timeout template
+
+Bombardier:
+Bombardier Inc. is a Canadian multinational aerospace and transportation company.They are very famous for their arospace work. We have made many e-learnings for them. They have made many elearning session to their employees such as plane instrumental trainings or the information on how to use plane equipments etc.
+We have made course for them in which first the landing page will be displayed where the dashboard of all the pages were displayed and each pages have some informative or interactive data such as video, text, Label generator, Hotspot, accordion, drag and drop, MCQ, and many more components to explain the details of activity.
+
+Technology Used-
+Backbone.js
+Handlebar.js
+Underscore.js
+Adapt Framework 1.2
+
+Label generator
+- In this component one big image has been shown in background and the plus signs were placed on it on various parts of the image. On click of each plus sign the small info popup open beside of the plus sign which is short description of 2-4 words. If some plus signs have brief description then there will be again a plus sign attached to the short description on click of popup plus sign the big popup of description including image opens on the screen.
+There will be shortcut "Open all" button available below the image on clicking of "Open all" button we can open all the short description popups on the images and as soon as we click the open all button then it will be replaced with "Close All" button, when "Close all" button clicked all the open short popup will be closed.
+Example: The back image can be of aeroplane and plus signs are placed on each part of plane such as wing of plane, front or back of plane etc. and on click of the plus the desired part name of the plane will be open in short popup.
+
+Hotspot
+- This is the question component in which a big background image is displayed and some area of image is highlighted in square/rectangle. In this component user has to select this highlighted area one by one and the sequence of selecting the highlighted spots is important. After selecting the highlighted area user has to submit the answer. And result will be displayed on the screen whether the user have selected spots in desired sequence or not. 
+The example of this can be human evolution cycle that is all the images of evolution that is from anxiont man to the current man are displayed in scatter manner in the images and each man is a highlighted area, so user has to select evolution from anxiont man to the current man in squence. If user select the sequence in correct order then the answer will be correct or the answer will be partly correct/incorrect.
+
+BlockContentItems
+- This is the extension which adds the more functionality to the course. When this extension is enable on the page then it adds 3 additional buttons on page navigation bar that are TOC, Speakers Note, info bar :
+ 	-TOC(Table Of Content) : When TOC tab get clicked it open new popup which has dashboard of  
+
+TOC
+Speaker Notes
+
+Bulkbarn:
+Bulkbarn is a very famous and standard mall chain situated in canada. They are very careful and innovative about their customer services and customer satisfaction.
+Therefore they have build some strategy and models by which their employees handles the customers, their issues, concerns, requirements etc to continue with getting the lifelong relationships with their customers.
+We have made the e-learning project for BulkBarn in which we have build the templates and courses to explain their learning objective such as-
+Customer service model, eight-step process to engage customers, respond to the customer need, create better shopping experience etc.
+In fact there is some meaning hidden in their mall name BULKBARN
+B-Bring it, U- Understanding customers need, L-Leading the customers, K- Knowledge the products, Processes and Promotions, B- Believing in product and processes,
+A- Ackonwledging their need and Add on, R- Relationship Management, N - Next Visit.
+And the each initial is the one course.
+There is each menu/page associated with each initial of name BULKBARN, and in each page there will be different component used such as video, text, hotgraphics, narrative, MCQ etc to explain the topic.
+
+
+Technology used : 
+- Backbone.js
+- Handlebar.js
+- Underscore.js 
+- Adapt framework 1.2
+
+Bookmark Extension -
+This extension is used to save the state of the course. This is mostly used when the course is uploaded on the CMS. In CMS when any course is uploaded,
+user attempt that course for the first and if left in between then it saves the state of the course and when user attempts that same course next time then it will
+redirect user to the state where he was left the course last time.
+
+textAnimate component -
+In this component the animated text(like Morque in HTML) comes on the screen and one of the alphabet from the text get increased in the font size and other text gets disappeared from the screen.
+
+pageCompletion extension- 
+This plugin is used to inform the user that he has completed the page and user gets link for the next page.
+
+Takeda Workday Help portal search functionality sharepoint 2007
+Takeda:
+- Takeda is international pharmaceutical company which is situated in Japan and Asia and a top 15 pharmaceutical company in the world.
+- They have come to us with project to build a help portal for their website named Workday using sharepoint 2007.
+- Features which are included in project are:
+	- Different types of trainings for the different area/country are added.
+	- There are different access as per the user login Example: Admin, HR, GlobalHR, Country specific resources etc.
+	- Search functionality which includes search for the resource/tranings which matches to the text provided in the search box and it results in a list of matching training titles and user can click to the specific resource which he/she wish to run.
+	- Common HR Contact page with details of point of contact.
+	- Admin page to add the trainings.
+- Made a search functionality:
+	- Details of search functionality:
+	- Search box is placed on top right corner of the portal.
+	- Search page includes displaying the list training/process titles, Global Resources, Country specific resources and HR contacts which are matching to the text given in search box.
+	- Search page also includes more specific filters on the top like search box to manipulate the text given, country dropdown and resource type dropdown and search button.
+	- Could apply specific filters on searched data and could get the much specific result which helps to open the desired training quikly to the user.
+
+Multiple Drag and Drop for YesNYou
+	-Build the adapt component which includes 4 types of drag and drop such as:
+
+		-Fill in the blanks:
+			-This type of DND have fill in the blanks like structure, user have to put appropriate draggable to the blank area.
+		-Sentence ordering:
+			- In this there will be drop area as text and user have to put appropriate draggable to the appropriate text.
+		-Picture DND:
+			-In this there will be the image as the drop area and user have to put appropriate draggable to the appropriate image.
+		-Word in sentence ordering:
+			- In this type there are only draggables which can be rearranged to arrange them in sequence.User has to rearrange the order of draggables to give appropriate answers
+
+Apex Bronz:
+	-This the the adapt framework based project which includes different type of components and extensions used to meet up the clients requirements. I have done 2 extensions:
+		-Custom Hotgraphics: 
+			- In this the user have a big image infront and have some hotspots on the image. On click of the image the question appearce on the screen(related to that specific area) or only information could occure depends upon the requirement the question would be set.
+			-There could be the chain of questioning on click of hotspot by using next nad previouse button user can answer each question.
+		-popup with image:
+			-This is the small functionality that is on submission of answer the popup occurce which could include image for more information.
+
+Takeda manager sharepoint 2013:
+	- This is the training portal for Managers of Takeda company.
+	- This is multilingual portal.
+	- This includes Home page for the takeda Managers.
+	- Different type of category, sub category and their resources.
+	- Resources could have document, Video, PDF, website link etc for the studying purpose.
+
+My Roles and responsibility:
+	- Maintain the database or List in the terms of Sharepoint.
+	- Changes in the functionality if occurce.
+	- Documentation of all the functionality.
+	- Translation Document in detail for English and client provide the translation for the same in other languages.
+
+
+Royal Enfield: 
+	- This is the e-learning for the employees of Royal Enfield which includes each stage of the bike's first 6 servicings.
+	- This includes introduction video after video end there will be the Welcome page which has language drop down.
+	- After user selects the language the appropriate translated content will be displayed.
+	- Now milestone page will be displayed which has 1 to 7 milestones. 
+	- 1st milestone will have all the videos for the 1st servicing of bike need.
+	- 1st milestone means the 1st servicing of bike.
+	- After selecting the first milestone user will be reached to the page which has several strips for the first servicing after clicking any of the strip it open the according video for the strip clicked.
+	E.g. The mos
+
